@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set "root=C:\Users\krisk\Downloads\WebTunes-Setlist\Setlist\Guns N' Roses"
+set "root="
 
 :: --- Folders ---
 for /d %%F in ("%root%\*") do (

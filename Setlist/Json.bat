@@ -4,7 +4,6 @@ setlocal enabledelayedexpansion
 set "root=%~dp0"
 set "json=%root%Setlist.json"
 
-:: --- STEP 1: Normalize folder names ---
 for /d %%F in ("%root%\*") do (
     set "name=%%~nxF"
     rem trim leading spaces
@@ -19,7 +18,6 @@ for /d %%F in ("%root%\*") do (
     )
 )
 
-:: --- STEP 2: Generate JSON ---
 (
 echo {
 echo   "bands": [

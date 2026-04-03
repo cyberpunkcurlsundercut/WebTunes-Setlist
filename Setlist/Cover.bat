@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 REM Root folder where all albums are located
-set "root=C:\Users\krisk\Downloads\WebTunes-Setlist\Setlist\Guns N' Roses"
+set "root="
 
 for /r "%root%" %%F in (*.mp3) do (
     REM Get folder path
