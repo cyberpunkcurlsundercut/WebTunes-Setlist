@@ -3,7 +3,6 @@ setlocal enabledelayedexpansion
 
 set "root="
 
-:: --- Folders ---
 for /d %%F in ("%root%\*") do (
     set "folder=%%~nxF"
     set "newname=!folder!"
@@ -40,7 +39,6 @@ for /d %%F in ("%root%\*") do (
 
     if not "!folder!"=="!newname!" ren "%%F" "!newname!"
 
-    :: --- Step 3: normalize disc subfolders ---
     for /d %%A in ("%%F\*") do (
         set "sub=%%~nxA"
         set "subclean=!sub!"
@@ -54,7 +52,6 @@ for /d %%F in ("%root%\*") do (
     )
 )
 
-:: --- Covers ---
 for /r "%root%" %%I in (*.jpg *.jpeg *.png) do (
     set "fname=%%~nxI"
     set "newfile=!fname!"
